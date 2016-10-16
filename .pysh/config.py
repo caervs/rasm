@@ -1,0 +1,3 @@
+"""
+pysh config parameters
+"""

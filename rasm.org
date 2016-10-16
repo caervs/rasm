@@ -1,0 +1,22 @@
+* Rasm
+
+** Introduction
+
+Rasm is a python framework and command-line utility for making elegant and reusable technical graphics. Rasm has a handful of advantages over existing tools:
+
+- It comes with a library of useful components for preparing typical technical graphics (like circuit diagrams)
+- It is constraint based meaning that you can piecemeal and programatically add components to diagrams and only worry about the spatial relationships between two components at a time
+- Rasm separates the topological relationships between your components from your spatial relationships. In this way you can be assured that the circuit or graph that you are turning into a vizualization is the same one that has been programmatically generated or validated through a simulation.
+- One rasm diagram can be reused with a variety of interchangeable drivers so that you can output your same diagram to the web, to static PDFs or to other media
+
+As an example diagram to whet your appetite, here is a schematic for an XOR gate with $out$ and $carry$ outputs
+
+#+BEGIN_SRC python rasm planar xor rasm/planar/examples/xor_gate.py
+#+END_SRC
+
+And here is some math $x=\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+
+and here is a state transition diagram
+
+#+BEGIN_SRC python rasm planar str rasm/planar/examples/state_transition.py
+#+END_SRC

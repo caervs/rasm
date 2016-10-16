@@ -1,0 +1,8 @@
+nose
+numpy
+pylint
+svgwrite
+-e git+https://github.com/caervs/functionals.git#egg=functionals
+-e git+https://github.com/caervs/pivot.git#egg=pivot
+-e git+https://github.com/caervs/pysh.git#egg=pysh
+-e git+https://github.com/caervs/replicate.git#egg=replicate
