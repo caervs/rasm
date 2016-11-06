@@ -176,7 +176,11 @@ def make_svg(name, components):
                            r=subcomponent.radius)
                 dwg.add(p)
             elif isinstance(subcomponent, Text):
-                dwg.add(dwg.text(subcomponent.text, insert=subcomponent.anchor,
+                # HACK pad the text slightly
+                hpad = PV(5, 0) if subcomponent.alignment == 'start' else \
+                       PV(-5, 0)
+                anchor = subcomponent.anchor + PV(0, 3.5) + hpad
+                dwg.add(dwg.text(subcomponent.text, insert=anchor,
                                  text_anchor=subcomponent.alignment,
                              ))
             else:
@@ -285,6 +289,5 @@ def poc():
         }
 
     make_svg('test.svg', cs)
-
 
 poc()
